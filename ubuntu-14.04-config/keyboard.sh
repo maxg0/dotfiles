@@ -7,3 +7,5 @@ gconftool-2 --set "/apps/compiz-1/plugins/unityshell/screen0/options/show_launch
 # disable alt
 # http://customizeubuntu.com/preferences/keyboard-shortcuts/disable-hud-when-pressing-alt-key
 gconftool-2 --set "/apps/compiz-1/plugins/unityshell/screen0/options/show_hud" --type string ""
+
+gsettings set org.gnome.desktop.wm.keybindings panel-main-menu []
