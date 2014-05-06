@@ -14,3 +14,7 @@ gconftool-2 --set "/apps/compiz-1/plugins/scale/screen0/options/initiate_key" --
 gconftool-2 --set "/apps/compiz-1/plugins/scale/screen0/options/initiate_all_key" --type string ""
 
 gsettings set org.gnome.desktop.wm.keybindings panel-main-menu []
+
+# super+q and super+e lower and raise windows
+gsettings set org.gnome.desktop.wm.keybindings lower "['<Super>q']"
+gsettings set org.gnome.desktop.wm.keybindings raise "['<Super>e']"
