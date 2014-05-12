@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+DOTFILES_ROOT="$(pwd)"
+echo $DOTFILES_ROOT
+
