@@ -1,0 +1,12 @@
+build-essential
+curl
+moreutils
+nano
+nmap
+ntp
+rsync
+screen
+sudo
+unrar
+unzip
+zsh
