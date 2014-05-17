@@ -5,9 +5,9 @@ DOTFILES=$(pwd);
 ln -s $DOTFILES/.bash_aliases ~/.bash_aliases
 ln -s $DOTFILES/.vimrc ~/.vimrc
 
-while ! which dialog; do
-  sudo apt-get install dialog;
-done
+sudo apt-get update
+sudo apt-get install dialog || echo "unable to install dialog, quitting"; exit
+
 pkglist=""
 n=1
 for pkg in $(cat packages.txt)
@@ -21,7 +21,6 @@ echo $pkglist
 choices=`/usr/bin/dialog --stdout --checklist 'Choose item:' 80 40 20 $pkglist |
 sed s/\"//g`
 
-sudo apt-get update
 sudo apt-get install $choices
 
 
