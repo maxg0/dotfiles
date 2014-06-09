@@ -8,6 +8,13 @@ set title
 "set mouse=a
 execute pathogen#infect()
 
+command! Reload so $MYVIMRC
+
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
 set background=dark
 colorscheme desert
 set t_Co=256
