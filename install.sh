@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 
 DOTFILES=$(pwd);
-SCRIPTSTATUS=""
-
-function scriptstatus(){
-    # used to keep track of what got installed
-    # placeholder function
-    # SCRIPTSTATUS=$SCRIPTSTATUS$@
-    echo ""
-}
 
 function yesno() {
     SIZE_X=40
@@ -23,11 +15,7 @@ Example: yesno "./chrome.sh" "Install Google Chrome?" "Not installing Chrome"
         if dialog --yesno "$2" $SIZE_Y $SIZE_X; then
             $1
         else
-            if [ -z "$3" ]; then
-                echo $3
-            else
-                echo "Skipping $2"
-            fi
+            echo "Skipping $2"
         fi
     fi
 }
@@ -52,8 +40,8 @@ sed s/\"//g`
 sudo apt-get install $choices
 
 yesno "curl -L http://install.ohmyz.sh | sh" "Install oh-my-zsh"
-yesno "./ubuntu/all.sh" "Ubuntu 14.04 shortcuts and configurations?"
-yesno "./chrome.sh" "Install Google Chrome Browser?"
+yesno "./ubuntu/all.sh" "Ubuntu 14.04 shortcuts and configurations"
+yesno "./chrome.sh" "Install Google Chrome Browser"
 
 # pathogen installation, will test this fully later
 # from: https://github.com/tpope/vim-pathogen/blob/master/README.markdown
