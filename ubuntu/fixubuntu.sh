@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 GS="/usr/bin/gsettings"
 CCUL="com.canonical.Unity.lenses"

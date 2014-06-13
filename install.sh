@@ -43,7 +43,7 @@ sudo apt-get install $choices
 yesno "curl -L http://install.ohmyz.sh | sh" "Install oh-my-zsh"
 yesno "./ubuntu/all.sh" "Ubuntu 14.04 shortcuts and configurations"
 yesno "./chrome.sh" "Install Google Chrome Browser"
-yesno "./ubuntu/fixubuntu.sh"
+yesno "./ubuntu/fixubuntu.sh" "Fixubuntu privacy fixes"
 
 # pathogen installation, will test this fully later
 # from: https://github.com/tpope/vim-pathogen/blob/master/README.markdown
