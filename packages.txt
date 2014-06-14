@@ -9,4 +9,5 @@ screen
 sudo
 unrar
 unzip
+vlc
 zsh
