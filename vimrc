@@ -5,7 +5,7 @@ set encoding=utf-8
 
 set title
 
-"set mouse=a
+set mouse=""
 execute pathogen#infect()
 
 command! Reload so $MYVIMRC
