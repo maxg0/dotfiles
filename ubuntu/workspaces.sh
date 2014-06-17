@@ -9,9 +9,10 @@ gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 3
 # is harder to unset for all kinds of things like Meta+S. Better to get
 # something nice in the long run though, so I have decided to use Meta instead.
 
-# Meta+WASD move around, Meta+Shift+WASD move windows around. Nice to be able
-# to change workspaces with just one hand.
+# Meta+WASD move around, Meta+Shift+WASD move windows around.
+# It's nice to be able to change workspaces with just one hand.
 # TODO WASD controls
+
 # TODO Add HJKL support together with WASD (is this even possible?)
 
 # TODO ctrl+alt+[numpad] or meta+[numpad] goes directly to workspaces
