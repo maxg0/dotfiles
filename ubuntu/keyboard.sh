@@ -6,6 +6,9 @@
 
 # disable super key
 # http://askubuntu.com/a/235143/194406
+# works on 14.04
+dconf write /org/compiz/profiles/unity/plugins/unityshell/show-launcher '""'
+# http://askubuntu.com/a/235143/194406
 # tested this and did not work
 gconftool-2 --set "/apps/compiz-1/plugins/unityshell/screen0/options/show_launcher" --type string ""
 # http://askubuntu.com/a/406153/194406
