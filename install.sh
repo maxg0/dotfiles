@@ -20,10 +20,12 @@ Example: yesno "./chrome.sh" "Install Google Chrome?" "Not installing Chrome"
     fi
 }
 
+# TODO make a function for this
 ln -s $DOTFILES/bash_aliases ~/.bash_aliases
 ln -s $DOTFILES/vimrc ~/.vimrc
 ln -s $DOTFILES/vim ~/.vim
 ln -s $DOTFILES/zshrc ~/.zshrc
+ln -s $DOTFILES/gitconfig ~/.gitconfig
 
 sudo apt-get update
 sudo apt-get install dialog || exit
