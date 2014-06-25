@@ -11,3 +11,5 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 export EDITOR='vim'
 
 setxkbmap -option caps:swapescape
+
+alias bower='noglob bower'
