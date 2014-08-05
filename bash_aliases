@@ -35,6 +35,8 @@ deploy-virtualenv() {
     pip install -r requirements.txt
 }
 
+alias mkdir='mkdir -p'
+
 # cd stuff and acceptable features from windows
 alias cls='clear'
 alias cd..='cd ..'
@@ -48,7 +50,7 @@ alias uuuuu='cd ../../../../..'
 alias uuuuuu='cd ../../../../../..'
 alias uuuuuuu='cd ../../../../../../..'
 
-#very easy way to uncompress almost anything
+#very easy way to decompress almost anything
 ex() {
     if [ -f $1 ] ; then
         case $1 in
