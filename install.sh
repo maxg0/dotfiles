@@ -24,7 +24,7 @@ Example: yesno "./chrome.sh" "Install Google Chrome?" "Not installing Chrome"
 ln -s $DOTFILES/bash_aliases ~/.bash_aliases
 ln -s $DOTFILES/vimrc ~/.vimrc
 ln -s $DOTFILES/vim ~/.vim
-ln -s $DOTFILES/zshrc ~/.zshrc
+#ln -s $DOTFILES/zshrc ~/.zshrc
 ln -s $DOTFILES/gitconfig ~/.gitconfig
 
 sudo apt-get update
@@ -46,7 +46,7 @@ sed s/\"//g`
 sudo apt-get install $choices
 
 
-yesno "curl -L http://install.ohmyz.sh | sh" "Install oh-my-zsh"
+#yesno "curl -L http://install.ohmyz.sh | sh" "Install oh-my-zsh"
 yesno "./ubuntu/all.sh" "Ubuntu 14.04 shortcuts and configurations"
 yesno "./chrome.sh" "Install Google Chrome Browser"
 yesno "./ubuntu/fixubuntu.sh" "Fixubuntu privacy fixes"
