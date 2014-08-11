@@ -9,4 +9,5 @@ screen
 sudo
 unrar
 unzip
+p7zip-full
 zsh
