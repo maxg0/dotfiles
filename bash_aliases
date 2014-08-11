@@ -10,8 +10,23 @@
 #fct=fix common typo
 #pwd=current working directory
 
+EDITOR=vim
+
 alias duh='du -h --max-depth=1'
 alias breload='source $HOME/.bashrc'
+
+swapCaps()
+{
+    if xmodmap -pke | egrep -i "escape" | egrep -i "keycode.*9.*"; then
+        xmodmap -e "clear lock"
+        xmodmap -e "keycode 66 = Escape"
+        xmodmap -e "keycode 9 = Caps_Lock"
+        xmodmap -e "add Lock = Caps_Lock"
+    fi
+}
+
+# doing this in this file is probably bad practice
+swapCaps
 
 # counts the amount of files, prints number
 alias files='ls -a1 | wc -l'
@@ -49,6 +64,16 @@ alias uuuu='cd ../../../..'
 alias uuuuu='cd ../../../../..'
 alias uuuuuu='cd ../../../../../..'
 alias uuuuuuu='cd ../../../../../../..'
+
+newsh() {
+    if [ -f $1 ]; then
+        echo "Will not use existing files";
+    else
+        echo $'#!/usr/bin/env bash\n' >> $1;
+        chmod +x $1
+        $EDITOR $1
+    fi
+}
 
 #very easy way to decompress almost anything
 ex() {
