@@ -32,7 +32,7 @@ sudo apt-get install dialog || exit
 
 pkglist=""
 n=1
-for pkg in $(cat packages.txt)
+for pkg in $(cat packages.txt gui_packages.txt)
 do
   pkglist="$pkglist $pkg $n on"
   n=$[n+1]
