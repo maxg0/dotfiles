@@ -9,7 +9,7 @@ function yesno() {
   Usage: yesno "command" "prompt text" ["skiptext"]
 Example: yesno "./chrome.sh" "Install Google Chrome?" "Not installing Chrome"
     '
-    if [ -z "$1" ]; then
+    if [ $# -eq 0 ]; then
         echo $USAGE
     else
         if dialog --yesno "$2" $SIZE_Y $SIZE_X; then
