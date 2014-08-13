@@ -15,18 +15,8 @@ EDITOR=vim
 alias duh='du -h --max-depth=1'
 alias breload='source $HOME/.bashrc'
 
-swapCaps()
-{
-    if xmodmap -pke | egrep -i "escape" | egrep -i "keycode.*9.*"; then
-        xmodmap -e "clear lock"
-        xmodmap -e "keycode 66 = Escape"
-        xmodmap -e "keycode 9 = Caps_Lock"
-        xmodmap -e "add Lock = Caps_Lock"
-    fi
-}
-
-# doing this in this file is probably bad practice
-swapCaps
+alias swapcaps='setxkbmap -option caps:escape'
+swapcaps
 
 # counts the amount of files, prints number
 alias files='ls -a1 | wc -l'
