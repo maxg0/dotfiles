@@ -2,7 +2,38 @@
 
 DOTFILES=$(pwd);
 
-function yesno() {
+# makes a symbolic link but removes old links and backs up old files
+# backs up old folders but if backup destination exists throws error instead
+# ln does not treat directories like files when backing up (possible bug?)
+function dotlink(){
+    TARGET=$1
+    LINK_NAME=$2
+
+    if [ -h $2 ]; then
+        rm $2
+    fi
+
+    if [ -d $2 ]; then
+
+        if [ -e $2~ ]; then
+            echo "ERROR: Tried to link a directory but it already has a backup"
+            exit
+        fi
+
+        mv --backup=t $2 $2~
+    fi
+
+    ln -s --backup=t $1 $2
+}
+
+dotlink $DOTFILES/bash_aliases ~/.bash_aliases
+dotlink $DOTFILES/vimrc ~/.vimrc
+dotlink $DOTFILES/vim ~/.vim
+#ln -s $DOTFILES/zshrc ~/.zshrc
+dotlink $DOTFILES/gitconfig ~/.gitconfig
+
+function yesno()
+{
     SIZE_X=40
     SIZE_Y=6
     USAGE='
@@ -19,13 +50,6 @@ Example: yesno "./chrome.sh" "Install Google Chrome?" "Not installing Chrome"
         fi
     fi
 }
-
-# TODO make a function for this
-ln -s $DOTFILES/bash_aliases ~/.bash_aliases
-ln -s $DOTFILES/vimrc ~/.vimrc
-ln -s $DOTFILES/vim ~/.vim
-#ln -s $DOTFILES/zshrc ~/.zshrc
-ln -s $DOTFILES/gitconfig ~/.gitconfig
 
 sudo apt-get update
 sudo apt-get install dialog || exit
@@ -44,7 +68,6 @@ sed s/\"//g`
 # TODO ask which gui packages to install and install at same time as others
 
 sudo apt-get install $choices
-
 
 #yesno "curl -L http://install.ohmyz.sh | sh" "Install oh-my-zsh"
 yesno "./ubuntu/all.sh" "Ubuntu 14.04 shortcuts and configurations"
