@@ -10,4 +10,5 @@ sudo
 unrar
 unzip
 p7zip-full
+vim
 zsh
