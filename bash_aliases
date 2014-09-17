@@ -11,6 +11,8 @@
 #pwd=current working directory
 
 EDITOR=vim
+# always edit as tabs
+alias vim='vim -p'
 
 alias duh='du -h --max-depth=1'
 alias breload='source $HOME/.bashrc'
