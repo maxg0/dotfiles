@@ -71,6 +71,9 @@ set nofoldenable " folding hides functions etc
 
 set completeopt=longest,menuone
 
+" Swap between .h and .cpp files with F4
+" http://vim.wikia.com/wiki/Easily_switch_between_source_and_header_file
+map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 " IDE like omnicompletion: http://vim.wikia.com/wiki/VimTip1386
 set omnifunc=syntaxcomplete#Complete
