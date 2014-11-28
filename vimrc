@@ -10,6 +10,7 @@ execute pathogen#infect()
 
 command! Reload so $MYVIMRC
 
+" Auto reloads vim | source http://stackoverflow.com/a/2403926/2324209
 augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
@@ -19,6 +20,9 @@ set background=dark
 colorscheme ron
 set t_Co=256
 
+" Highlight 81st and 121st characters on a line
+set colorcolumn=81
+"set colorcolumn=121
 
 syntax on
 filetype plugin indent on
