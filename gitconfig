@@ -1,3 +1,5 @@
 [user]
 	email = grasbecm@arcada.fi
 	name = Max
+[core]
+	editor = vim
