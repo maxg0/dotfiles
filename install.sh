@@ -56,7 +56,7 @@ sudo apt-get install dialog || exit
 
 pkglist=""
 n=1
-for pkg in $(cat packages.txt gui_packages.txt)
+for pkg in $(cat apt_packages.txt gui_packages.txt pip_packages.txt)
 do
   pkglist="$pkglist $pkg $n on"
   n=$[n+1]
@@ -69,10 +69,13 @@ sed s/\"//g`
 
 sudo apt-get install $choices
 
+# TODO check what distro is in use
+# TODO ask to install _everything_
 #yesno "curl -L http://install.ohmyz.sh | sh" "Install oh-my-zsh"
 yesno "./ubuntu/all.sh" "Ubuntu 14.04 shortcuts and configurations"
 yesno "./chrome.sh" "Install Google Chrome Browser"
 yesno "./ubuntu/fixubuntu.sh" "Fixubuntu privacy fixes"
+yesno "python ./get-pip.py" "Install PIP"
 
 # pathogen installation, will test this fully later
 # from: https://github.com/tpope/vim-pathogen/blob/master/README.markdown

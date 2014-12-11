@@ -2,13 +2,14 @@ axel
 build-essential
 curl
 moreutils
+nload
 nmap
 ntp
+p7zip-full
 rsync
 screen
 sudo
 unrar
 unzip
-p7zip-full
 vim
 zsh
