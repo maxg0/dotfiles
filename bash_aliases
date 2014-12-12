@@ -75,6 +75,10 @@ newsh() {
     fi
 }
 
+youtube2mp3() {
+    youtube-dl --extract-audio --audio-format mp3 $@
+}
+
 #very easy way to decompress almost anything
 ex() {
     if [ -f $1 ] ; then

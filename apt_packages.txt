@@ -1,6 +1,7 @@
 axel
 build-essential
 curl
+libav-tools
 moreutils
 nload
 nmap
