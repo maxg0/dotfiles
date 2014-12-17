@@ -70,12 +70,13 @@ sed s/\"//g`
 sudo apt-get install $choices
 
 # TODO check what distro is in use
-# TODO ask to install _everything_
+# TODO turn these into choices as well just like packages are
 #yesno "curl -L http://install.ohmyz.sh | sh" "Install oh-my-zsh"
 yesno "./ubuntu/all.sh" "Ubuntu 14.04 shortcuts and configurations"
 yesno "./chrome.sh" "Install Google Chrome Browser"
 yesno "./ubuntu/fixubuntu.sh" "Fixubuntu privacy fixes"
 yesno "python ./get-pip.py" "Install PIP"
+yesno "mkdir $HOME/.vimundo" "Vim remembers undo history"
 
 # pathogen installation, will test this fully later
 # from: https://github.com/tpope/vim-pathogen/blob/master/README.markdown

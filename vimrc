@@ -94,3 +94,23 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 imap <C-@> <C-Space>
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Remember cursor position
+" http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
+" Remember undo/changes history
+" http://askubuntu.com/a/4247/194406
+set undofile
+set undodir=~/.vimundo/
+
