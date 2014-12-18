@@ -93,7 +93,7 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
             \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
 
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType * setlocal formatoptions+=c formatoptions+=r formatoptions+=o
 
 " Remember cursor position
 " http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
