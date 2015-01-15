@@ -14,7 +14,7 @@ EDITOR=vim
 # always edit as tabs
 alias vim='vim -p'
 
-alias duh='du -h --max-depth=1'
+alias duh='du -d1 -h | sort -h'
 alias breload='source $HOME/.bashrc'
 
 alias swapcaps='setxkbmap -option caps:escape'
@@ -46,8 +46,13 @@ alias mkdir='mkdir -p'
 
 # http://stackoverflow.com/a/9057392/2324209
 repeat() {
-    for (( i=1; i<=$1; i++ )); do
-        ${*:2};
+    case $1 in
+        ''|*[!0-9]*) echo "Usage: repeat N commands"; return ;;
+        *) ;;
+    esac
+    local i=0;
+    for ((i=1; i<=$1; i++ )); do
+        ${@:2};
     done;
 }
 
