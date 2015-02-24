@@ -3,10 +3,22 @@ set nocompatible
 scriptencoding utf-8
 set encoding=utf-8
 
+" Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'othree/html5.vim'
+Plugin 'jshint.vim'
+Plugin 'surround.vim'
+Plugin 'editorconfig-vim'
+
+call vundle#end()
+filetype plugin indent on
+" End Vundle
+
 set title
 
 set mouse=""
-execute pathogen#infect()
 
 command! Reload so $MYVIMRC
 
