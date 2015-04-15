@@ -91,6 +91,10 @@ set completeopt=longest,menuone
 " http://vim.wikia.com/wiki/Easily_switch_between_source_and_header_file
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
+" Run current buffer with python
+" http://stackoverflow.com/a/18948530/2324209
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+
 " IDE like omnicompletion: http://vim.wikia.com/wiki/VimTip1386
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
