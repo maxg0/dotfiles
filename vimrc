@@ -87,6 +87,15 @@ set nofoldenable " folding hides functions etc
 
 set completeopt=longest,menuone
 
+" remap F6 to ö and so on so I don't need to switch character maps just to
+" insert those characters
+imap <F6> ö
+imap <S-F6> Ö
+imap <F7> å
+imap <S-F7> Å
+imap <F8> ä
+imap <S-F8> Ä
+
 " Swap between .h and .cpp files with F4
 " http://vim.wikia.com/wiki/Easily_switch_between_source_and_header_file
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
