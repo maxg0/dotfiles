@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mkdir -p vim
+
 function yesno()
 {
     SIZE_X=40
@@ -45,3 +47,5 @@ yesno "./chrome.sh" "Install Google Chrome Browser"
 yesno "./ubuntu/fixubuntu.sh" "Fixubuntu privacy fixes"
 yesno "python ./get-pip.py" "Install PIP"
 yesno "mkdir $HOME/.vimundo" "Vim remembers undo history"
+yesno "./vundle" "Install Vundle"
+
