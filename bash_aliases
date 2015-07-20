@@ -36,6 +36,10 @@ alias sagr='sudo apt-get remove'
 
 wiki() { dig +short txt `echo $@ | sed -e s/\ //g`.wp.dg.cx; }
 
+activate() {
+    source $1/bin/activate
+}
+
 deploy-virtualenv() {
     virtualenv --no-site-packages --distribute .env
     source .env/bin/activate
