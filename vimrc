@@ -75,7 +75,7 @@ set ignorecase
 " Highlight dynamically as pattern is typed
 " set incsearch
 
-" hides unwanted spaces with a · symbol
+" marks trailing spaces with a · symbol
 " needs `scriptencoding utf-8` and `set encoding=utf-8`
 set list listchars=tab:\ \ ,trail:·
 
@@ -104,20 +104,6 @@ map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 " http://stackoverflow.com/a/18948530/2324209
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
-" IDE like omnicompletion: http://vim.wikia.com/wiki/VimTip1386
-set omnifunc=syntaxcomplete#Complete
-set completeopt=longest,menuone
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-
-inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-            \ "\<lt>C-n>" :
-            \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-            \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-            \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-imap <C-@> <C-Space>
-
 autocmd FileType * setlocal formatoptions+=c formatoptions+=r formatoptions+=o
 
 " Remember cursor position
@@ -139,3 +125,8 @@ augroup END
 set undofile
 set undodir=~/.vimundo/
 
+autocmd FileType tex noremap j gj
+autocmd FileType tex noremap k gk
+
+hi clear SpellBad
+hi SpellBad ctermfg=244
