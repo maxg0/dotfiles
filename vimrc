@@ -127,6 +127,7 @@ set undodir=~/.vimundo/
 
 autocmd FileType tex noremap j gj
 autocmd FileType tex noremap k gk
+autocmd FileType tex set colorcolumn=0
 
 hi clear SpellBad
 hi SpellBad ctermfg=244
