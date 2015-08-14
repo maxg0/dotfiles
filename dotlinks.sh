@@ -26,6 +26,7 @@ function dotlink(){
     ln -s --backup=t $1 $2
 }
 
+dotlink $DOTFILES/bashrc ~/.bashrc
 dotlink $DOTFILES/bash_aliases ~/.bash_aliases
 dotlink $DOTFILES/vimrc ~/.vimrc
 dotlink $DOTFILES/vim ~/.vim
