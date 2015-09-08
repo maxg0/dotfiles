@@ -45,7 +45,6 @@ sudo apt-get install $choices
 yesno "./ubuntu/all.sh" "Ubuntu 14.04 shortcuts and configurations"
 yesno "./chrome.sh" "Install Google Chrome Browser"
 yesno "./ubuntu/fixubuntu.sh" "Fixubuntu privacy fixes"
-yesno "python ./get-pip.py" "Install PIP"
 yesno "mkdir $HOME/.vimundo" "Vim remembers undo history"
 yesno "./vundle" "Install Vundle"
 
