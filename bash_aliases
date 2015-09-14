@@ -14,6 +14,8 @@ EDITOR=vim
 # always edit as tabs
 alias vim='vim -p'
 
+alias info='info --vi-keys'
+
 alias duh='du -d1 -h | sort -h'
 alias breload='source $HOME/.bashrc'
 
