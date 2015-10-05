@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Turn capslock into escape
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
+
 # disable F1 as help
 
 
