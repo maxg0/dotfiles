@@ -26,7 +26,7 @@ sudo apt-get install dialog || exit
 
 pkglist=""
 n=1
-for pkg in $(cat apt_packages.txt gui_packages.txt pip_packages.txt)
+for pkg in $(cat apt_packages.txt gui_packages.txt)
 do
   pkglist="$pkglist $pkg $n on"
   n=$[n+1]
@@ -34,8 +34,6 @@ done
 
 choices=`/usr/bin/dialog --stdout --checklist 'Choose item:' 80 40 20 $pkglist |
 sed s/\"//g`
-
-# TODO ask which gui packages to install and install at same time as others
 
 sudo apt-get install $choices
 
