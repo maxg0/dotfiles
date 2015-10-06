@@ -42,7 +42,6 @@ sudo apt-get install $choices
 #yesno "curl -L http://install.ohmyz.sh | sh" "Install oh-my-zsh"
 yesno "./ubuntu/all.sh" "Ubuntu 14.04 shortcuts and configurations"
 yesno "./chrome.sh" "Install Google Chrome Browser"
-yesno "./ubuntu/fixubuntu.sh" "Fixubuntu privacy fixes"
 yesno "mkdir $HOME/.vimundo" "Vim remembers undo history"
-yesno "./vundle" "Install Vundle"
+yesno "./vundle.sh" "Install Vundle"
 
