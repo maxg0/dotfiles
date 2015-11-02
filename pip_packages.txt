@@ -1,3 +1,4 @@
 youtube-dl
 https://github.com/joh/when-changed/archive/master.zip
 ansible
+powerline-status

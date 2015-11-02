@@ -7,14 +7,34 @@ set encoding=utf-8
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'gmarik/Vundle.vim'
 Plugin 'othree/html5.vim'
 Plugin 'jshint.vim'
 Plugin 'surround.vim'
 Plugin 'editorconfig-vim'
 
+Plugin 'mbbill/undotree'
+" these are from
+" https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
+Plugin 'scrooloose/syntastic'
+Plugin 'nvie/vim-flake8'
+
 call vundle#end()
 filetype plugin indent on
 " End Vundle
+
+" Undotree toggle with U
+nnoremap U :UndotreeToggle<cr>
+
+" Show statusline
+set laststatus=2
+
+" Powerline stuff
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set showtabline=2
+set t_Co=256
+set noshowmode
+" end of powerline stuff
 
 set title
 
@@ -32,7 +52,8 @@ set background=dark
 colorscheme ron
 set t_Co=256
 
-" Highlight 81st and 121st characters on a line
+" To enforce 80 line limits, highlight 81st (and optionally 121st) characters
+" on a line
 set colorcolumn=81
 "set colorcolumn=121
 
@@ -95,6 +116,12 @@ imap <F7> å
 imap <S-F7> Å
 imap <F8> ä
 imap <S-F8> Ä
+
+" split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " Swap between .h and .cpp files with F4
 " http://vim.wikia.com/wiki/Easily_switch_between_source_and_header_file

@@ -15,6 +15,12 @@
 # Sources: http://askubuntu.com/a/309179 and http://askubuntu.com/a/621922
 export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
 
+export TERM=xterm-256color
+
+if [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh ]; then
+    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
+fi
+
 # everything from here on is the ubuntu (14.04?) default bashrc
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
