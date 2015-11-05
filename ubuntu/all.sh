@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# this is ran from parent directory
-directory=$(basename "$PWD")
-$directory/keyboard.sh
-$directory/mouse.sh
-$directory/misc.sh
-$directory/workspaces.sh
-$directory/fixubuntu.sh
+
+$PWD/ubuntu/keyboard.sh
+$PWD/ubuntu/mouse.sh
+$PWD/ubuntu/misc.sh
+$PWD/ubuntu/workspaces.sh
+$PWD/ubuntu/fixubuntu.sh

@@ -3,3 +3,5 @@
 	name = Max
 [core]
 	editor = vim
+[push]
+	default = simple

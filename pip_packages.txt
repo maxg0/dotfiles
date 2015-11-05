@@ -1,4 +1,6 @@
-youtube-dl
-https://github.com/joh/when-changed/archive/master.zip
 ansible
 powerline-status
+virtualenvwrapper
+virtualenv
+youtube-dl
+https://github.com/joh/when-changed/archive/master.zip

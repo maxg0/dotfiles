@@ -31,4 +31,5 @@ dotlink $DOTFILES/bash_aliases ~/.bash_aliases
 dotlink $DOTFILES/vimrc ~/.vimrc
 dotlink $DOTFILES/vim ~/.vim
 dotlink $DOTFILES/gitconfig ~/.gitconfig
+dotlink $DOTFILES/tmux.conf ~/.tmux.conf
 

@@ -7,4 +7,5 @@ sudo fc-cache -f -v
 mkdir -p ~/.config/fontconfig/fonts.conf
 wget -O ~/.config/fontconfig/fonts.conf/10-powerline-symbols.conf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
 
+sudo fc-cache -f -v ~/.local/share/fonts/
 

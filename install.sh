@@ -41,7 +41,8 @@ sudo apt-get install $choices
 # TODO turn these into choices as well just like packages are
 #yesno "curl -L http://install.ohmyz.sh | sh" "Install oh-my-zsh"
 yesno "./ubuntu/all.sh" "Ubuntu 14.04 shortcuts and configurations"
-yesno "./chrome.sh" "Install Google Chrome Browser"
+yesno "./chrome.sh" "Install Google Chrome Browser" "Not installing Chrome"
 yesno "mkdir $HOME/.vimundo" "Vim remembers undo history"
 yesno "./vundle.sh" "Install Vundle"
-
+yesno "sudo pip install -r pip_packages.txt" "Pip packages"
+yesno "./dotlinks.sh" "dotlinks"
