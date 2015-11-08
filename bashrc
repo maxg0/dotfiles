@@ -21,6 +21,11 @@ if [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline
     source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
 fi
 
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/dev
+source /usr/local/bin/virtualenvwrapper.sh
+
 # everything from here on is the ubuntu (14.04?) default bashrc
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
