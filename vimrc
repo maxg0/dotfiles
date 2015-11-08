@@ -25,6 +25,17 @@ filetype plugin indent on
 " Undotree toggle with U
 nnoremap U :UndotreeToggle<cr>
 
+" Paste toggle, because indentation messes up pasted code like this:
+" function pasted() {
+"         var i = 0;
+"                 if(i === 3) {
+"                             ...
+" so instead you :set paste and :set nopaste, but those take a lot of typing
+" so use the F12 key for this instead. There are more complicated solutions
+" but this works for now. (could for instance use Shift+Insert to jump to
+" paste mode, paste the text and turn paste mode off)
+set pastetoggle=<F12>
+
 " Show statusline
 set laststatus=2
 
@@ -37,7 +48,7 @@ set noshowmode
 
 set title
 
-set mouse=""
+set mouse=a
 
 command! Reload so $MYVIMRC
 
@@ -106,15 +117,6 @@ set foldnestmax=3
 set nofoldenable " folding hides functions etc
 
 set completeopt=longest,menuone
-
-" remap F6 to ö and so on so I don't need to switch character maps just to
-" insert those characters
-imap <F6> ö
-imap <S-F6> Ö
-imap <F7> å
-imap <S-F7> Å
-imap <F8> ä
-imap <S-F8> Ä
 
 " split navigations
 nnoremap <C-J> <C-W><C-J>
