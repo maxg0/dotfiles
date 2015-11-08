@@ -19,9 +19,6 @@ alias info='info --vi-keys'
 alias duh='du -d1 -h | sort -h'
 alias breload='source $HOME/.bashrc'
 
-alias swapcaps='setxkbmap -option caps:escape'
-swapcaps
-
 # counts the amount of files, prints number
 alias files='ls -a1 | wc -l'
 # fct
@@ -53,7 +50,7 @@ repeat() {
 }
 
 # cd stuff and acceptable features from windows
-# could this with the repeat function like alias uu='repeat 2 cd ..'
+# could combine this with the repeat function like alias uu='repeat 2 cd ..'
 alias cls='clear'
 alias cd..='cd ..'
 alias cd...='cd ../..'
