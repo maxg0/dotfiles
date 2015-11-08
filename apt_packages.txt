@@ -1,6 +1,7 @@
 axel
 build-essential
 curl
+imagemagick
 libav-tools
 moreutils
 nload
