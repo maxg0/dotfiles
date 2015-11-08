@@ -26,6 +26,8 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
 source /usr/local/bin/virtualenvwrapper.sh
 
+export VIRTUALENV_PYTHON=$(which python3)
+
 # everything from here on is the ubuntu (14.04?) default bashrc
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
