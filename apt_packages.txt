@@ -12,6 +12,7 @@ python-pip
 rsync
 screen
 sudo
+tmux
 unrar
 unzip
 vim
