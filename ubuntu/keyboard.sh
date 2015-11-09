@@ -14,6 +14,7 @@
 # F10 is media next  # TODO automatically set this
 # F11 is for setting fullscreen mode
 # F12 is for toggling paste mode in vim (vimrc)
+#     Shift+F12 sends the last yank to xclip
 
 # TODO Shift+Alt L switch to next source
 # I tend to switch between a Finnish keyboard layout with umlauts
