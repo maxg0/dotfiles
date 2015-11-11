@@ -11,8 +11,6 @@
 #pwd=current working directory
 
 EDITOR=vim
-# always edit as tabs
-alias vim='vim -p'
 
 alias info='info --vi-keys'
 
