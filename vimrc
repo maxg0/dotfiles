@@ -130,7 +130,8 @@ nnoremap <C-H> <C-W><C-H>
 " http://vim.wikia.com/wiki/Easily_switch_between_source_and_header_file
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
-" Ctrl+B and Ctrl+Shift+B change buffers nnoremap <C-B> :bnext<CR>
+" Ctrl+B and Ctrl+Shift+B change buffers
+nnoremap <C-B> :bnext<CR>
 nnoremap <S-B> :bprevious<CR>
 
 " Navigate windows with Ctrl+HJKL
