@@ -8,13 +8,12 @@
 # F4  switches between cpp and h files (vimrc)
 # F5  is unassigned
 # F6  is unassigned
-# F7  is unassigned
+# F7  is write to xclip from vim in visual mode
 # F8  is media previous # TODO automatically set media keys
 # F9  is media pause
 # F10 is media next
 # F11 is for setting fullscreen mode
 # F12 is for toggling paste mode in vim (vimrc)
-#     Shift+F12 sends the last yank to xclip
 
 # TODO Shift+Alt L switch to next source
 # I tend to switch between a Finnish keyboard layout with umlauts

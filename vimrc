@@ -36,7 +36,7 @@ nnoremap U :UndotreeToggle<cr>
 " paste mode, paste the text and turn paste mode off)
 set pastetoggle=<F12>
 
-nnoremap <S-F12> :call system('xclip', @0)<CR>
+vmap <F6> :w !xclip<CR><CR>
 
 " Show statusline
 set laststatus=2

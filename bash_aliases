@@ -18,6 +18,7 @@ alias duh='du -d1 -h | sort -h'
 alias breload='source $HOME/.bashrc'
 
 # counts the amount of files, prints number
+# TODO this gives too many because . and .. are included
 alias files='ls -a1 | wc -l'
 # fct
 alias sl='ls'
