@@ -37,8 +37,7 @@ gconftool-2 --set "/apps/compiz-1/plugins/unityshell/screen0/options/show_launch
 gconftool-2 --set "/apps/compiz-1/plugins/unityshell/screen0/options/shortcut_overlay" --type boolean false
 
 # disable alt
-# http://customizeubuntu.com/preferences/keyboard-shortcuts/disable-hud-when-pressing-alt-key
-gconftool-2 --set "/apps/compiz-1/plugins/unityshell/screen0/options/show_hud" --type string ""
+dconf write /org/compiz/integrated/show-hud '[""]'
 
 # disable super+w
 gconftool-2 --set "/apps/compiz-1/plugins/scale/screen0/options/initiate_key" --type string ""
