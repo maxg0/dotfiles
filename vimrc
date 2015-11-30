@@ -133,8 +133,8 @@ nnoremap <C-H> <C-W><C-H>
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 " Ctrl+B and Shift+B change buffers
-nnoremap <S-L> :bnext<CR>
-nnoremap <S-H> :bprevious<CR>
+nnoremap <C-B> :bnext<CR>
+nnoremap <S-B> :bprevious<CR>
 
 " Navigate windows with Ctrl+HJKL
 nnoremap <C-H> :wincmd h<CR>
@@ -142,9 +142,9 @@ nnoremap <C-I> :wincmd i<CR>
 nnoremap <C-J> :wincmd j<CR>
 nnoremap <C-K> :wincmd k<CR>
 
-nnoremap <C-I> :tabnew<Space>
-nnoremap <C-B> :tabnext<CR>
-nnoremap <S-B> :tabprevious<CR>
+" navigate tabs with Esc+H and Esc+L
+noremap <S-L> :tabnext<CR>
+noremap <S-H> :tabprevious<CR>
 
 nnoremap <S-K> <Nop>
 
