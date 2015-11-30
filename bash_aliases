@@ -11,6 +11,7 @@
 #pwd=current working directory
 
 EDITOR=vim
+alias vim='vim -p'
 
 alias info='info --vi-keys'
 
