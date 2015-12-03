@@ -7,7 +7,7 @@
 # F3  is unassigned
 # F4  switches between cpp and h files (vimrc)
 # F5  is unassigned
-# F6  is unassigned
+# F6  is for sending selected lines to xclip (vimrc)
 # F7  is write to xclip from vim in visual mode
 # F8  is media previous # TODO automatically set media keys
 # F9  is media pause
