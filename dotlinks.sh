@@ -32,4 +32,4 @@ dotlink $DOTFILES/vimrc ~/.vimrc
 dotlink $DOTFILES/vim ~/.vim
 dotlink $DOTFILES/gitconfig ~/.gitconfig
 dotlink $DOTFILES/tmux.conf ~/.tmux.conf
-
+dotlink $DOTFILES/django_bash_completion ~/.django_bash_completion

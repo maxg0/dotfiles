@@ -1,5 +1,8 @@
 # Own customizations begin here
 
+# Django bash autocompletion
+. ~/.django_bash_completion
+
 # this turns the output of the command-not-found package into a prompt instead
 # of telling the user to type out the command. So instead of this:
 #

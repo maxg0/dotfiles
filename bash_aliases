@@ -32,6 +32,7 @@ alias ll='ls -la'
 alias sagi='sudo apt-get install'
 alias sagu='sudo apt-get -y update; sudo apt-get -y upgrade; sudo apt-get -y autoremove;'
 alias sagr='sudo apt-get remove'
+alias suga='sudo apt-get autoclean && sudo apt-get autoremove'
 
 wiki() { dig +short txt `echo $@ | sed -e s/\ //g`.wp.dg.cx; }
 
@@ -62,6 +63,12 @@ alias uuuu='cd ../../../..'
 alias uuuuu='cd ../../../../..'
 alias uuuuuu='cd ../../../../../..'
 alias uuuuuuu='cd ../../../../../../..'
+
+# git related stuff
+
+# Force push to the current branch.
+# Handy when you want to make a small change to a PR.
+alias gfp='git commit --amend; git push --force origin $(git rev-parse --abbrev-ref HEAD)'
 
 newsh() {
     if [ -f $1 ]; then
