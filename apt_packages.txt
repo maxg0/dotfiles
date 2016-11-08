@@ -21,4 +21,5 @@ tmux
 unrar
 unzip
 vim
+xclip
 zsh
