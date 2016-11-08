@@ -3,6 +3,10 @@ build-essential
 curl
 imagemagick
 libav-tools
+libcurl4-openssl-dev
+libgirepository1.0-dev
+libglib2.0-dev
+libssl-dev
 moreutils
 nload
 nmap
