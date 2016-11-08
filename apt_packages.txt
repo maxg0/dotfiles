@@ -1,5 +1,6 @@
 axel
 build-essential
+cmake
 curl
 imagemagick
 libav-tools
