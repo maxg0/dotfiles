@@ -132,6 +132,10 @@ nnoremap <C-H> <C-W><C-H>
 " http://vim.wikia.com/wiki/Easily_switch_between_source_and_header_file
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
+"Remove all trailing whitespace by pressing F5
+"http://vi.stackexchange.com/a/2285
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
 " Ctrl+B and Shift+B change buffers
 nnoremap gn :bnext<CR>
 nnoremap gb :bprevious<CR>
