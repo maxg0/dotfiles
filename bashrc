@@ -1,5 +1,8 @@
 # Own customizations begin here
 
+# Local or project specific bashrc stuff so we don't "pollute" this file
+source ~/.local_bashrc
+
 export LD_LIBRARY_PATH=/usr/local/lib
 
 # Django bash autocompletion
