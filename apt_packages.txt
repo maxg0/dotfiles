@@ -16,6 +16,7 @@ p7zip-full
 python-pip
 rsync
 screen
+silversearcher-ag
 sudo
 tmux
 unrar
