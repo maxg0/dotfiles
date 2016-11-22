@@ -1,8 +1,13 @@
 axel
 build-essential
+cmake
 curl
 imagemagick
 libav-tools
+libcurl4-openssl-dev
+libgirepository1.0-dev
+libglib2.0-dev
+libssl-dev
 moreutils
 nload
 nmap
@@ -16,4 +21,5 @@ tmux
 unrar
 unzip
 vim
+xclip
 zsh

@@ -1,5 +1,7 @@
 # Own customizations begin here
 
+export LD_LIBRARY_PATH=/usr/local/lib
+
 # Django bash autocompletion
 . ~/.django_bash_completion
 
