@@ -52,7 +52,7 @@ set noshowmode
 
 set title
 
-set mouse=a
+set mouse=
 
 command! Reload so $MYVIMRC
 
@@ -112,7 +112,7 @@ set ignorecase
 
 " marks trailing spaces with a · symbol
 " needs `scriptencoding utf-8` and `set encoding=utf-8`
-set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:▸-,trail:·
 
 set linebreak
 
