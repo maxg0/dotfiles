@@ -8,6 +8,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'lepture/vim-jinja'
 Plugin 'othree/html5.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'jshint.vim'
