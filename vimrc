@@ -8,6 +8,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'lepture/vim-jinja'
 Plugin 'othree/html5.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'jshint.vim'
@@ -52,7 +53,7 @@ set noshowmode
 
 set title
 
-set mouse=a
+set mouse=
 
 command! Reload so $MYVIMRC
 
@@ -115,7 +116,7 @@ set ignorecase
 
 " marks trailing spaces with a · symbol
 " needs `scriptencoding utf-8` and `set encoding=utf-8`
-set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:▸-,trail:·
 
 set linebreak
 
