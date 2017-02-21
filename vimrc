@@ -103,6 +103,9 @@ set softtabstop=4
 set tabstop=4
 set expandtab
 
+" set spaces to 2 in yaml files
+au FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+
 " Highlight searches
 set hlsearch
 " Ignore case of searches
