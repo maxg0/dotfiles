@@ -69,6 +69,7 @@ alias uuuuuuu='cd ../../../../../../..'
 # Force push to the current branch.
 # Handy when you want to make a small change to a PR.
 alias gfp='git commit --amend --no-edit; git push --force origin $(git rev-parse --abbrev-ref HEAD)'
+alias gs='git status'
 
 newsh() {
     if [ -f $1 ]; then
