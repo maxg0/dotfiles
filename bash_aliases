@@ -64,11 +64,14 @@ alias uuuuu='cd ../../../../..'
 alias uuuuuu='cd ../../../../../..'
 alias uuuuuuu='cd ../../../../../../..'
 
+# virtualenv related
+alias wo='workon'
+
 # git related stuff
 
 # Force push to the current branch.
 # Handy when you want to make a small change to a PR.
-alias gfp='git commit --amend --no-edit; git push --force origin $(git rev-parse --abbrev-ref HEAD)'
+alias gfp='git push --force origin $(git rev-parse --abbrev-ref HEAD)'
 alias gs='git status'
 
 newsh() {
