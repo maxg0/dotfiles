@@ -6,6 +6,11 @@ source ~/.local_bashrc
 # Django bash autocompletion
 . ~/.django_bash_completion
 
+# virtualenvwrapper tab completion fix
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/dev
+source /usr/local/bin/virtualenvwrapper.sh
+
 # this turns the output of the command-not-found package into a prompt instead
 # of telling the user to type out the command. So instead of this:
 #
