@@ -154,6 +154,8 @@ nnoremap <C-K> :wincmd k<CR>
 nnoremap <C-M> :tabm +1<CR>
 nnoremap <C-N> :tabm -1<CR>
 
+nnoremap <C-B> :tabnew 
+
 " navigate tabs with Esc+H and Esc+L
 noremap <S-L> :tabnext<CR>
 noremap <S-H> :tabprevious<CR>
