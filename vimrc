@@ -151,10 +151,10 @@ nnoremap <C-J> :wincmd j<CR>
 nnoremap <C-K> :wincmd k<CR>
 
 " Move tabs with Ctrl+] and Ctrl+[
-nnoremap <C-M> :tabm +1<CR>
-nnoremap <C-N> :tabm -1<CR>
+nnoremap <C-N> :tabm +1<CR>
+nnoremap <C-B> :tabm -1<CR>
 
-nnoremap <C-B> :tabnew 
+nnoremap <C-C> :tabnew 
 
 " navigate tabs with Esc+H and Esc+L
 noremap <S-L> :tabnext<CR>
