@@ -25,6 +25,8 @@ call vundle#end()
 filetype plugin indent on
 " End Vundle
 
+let g:syntastic_python_checkers = ['pylint', 'flake8']
+
 " Undotree toggle with U
 nnoremap U :UndotreeToggle<cr>
 
