@@ -16,8 +16,9 @@ Plugin 'surround.vim'
 Plugin 'editorconfig-vim'
 
 Plugin 'mbbill/undotree'
-" these are from
-" https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
+
+" Python specific stuff
+Plugin 'fisadev/vim-isort'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 
@@ -25,7 +26,8 @@ call vundle#end()
 filetype plugin indent on
 " End Vundle
 
-let g:syntastic_python_checkers = ['pylint', 'flake8']
+let g:syntastic_python_pylint_exe = 'python -m pylint'
+let g:syntastic_python_checkers = ['pylint']
 
 " Undotree toggle with U
 nnoremap U :UndotreeToggle<cr>

@@ -1,5 +1,14 @@
 # Own customizations begin here
 
+# Write to history automatically.
+export PROMPT_COMMAND='history -a'
+
+# Disable scroll lock
+stty -ixon
+
+export EDITOR=vim
+export VISUAL=vim
+
 # Local or project specific bashrc stuff so we don't "pollute" this file
 source ~/.local_bashrc
 

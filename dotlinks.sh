@@ -34,3 +34,4 @@ dotlink $DOTFILES/gitconfig ~/.gitconfig
 dotlink $DOTFILES/tmux.conf ~/.tmux.conf
 dotlink $DOTFILES/django_bash_completion ~/.django_bash_completion
 dotlink $DOTFILES/pylintrc ~/.pylintrc
+dotlink $DOTFILES/agignore ~/.agignore
