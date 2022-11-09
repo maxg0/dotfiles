@@ -1,0 +1,21 @@
+# This file is for my custom changes to bashrc that are specific to me.
+# local_bashrc is for changes specific to the local machine.
+source ~/.local_bashrc
+
+# This turns the output of the command-not-found package into a prompt instead
+# of telling the user to type out the command. So instead of this:
+#
+# > The program 'ccsm' is currently not installed. You can install it by typing:
+# > sudo apt-get install compizconfig-settings-manager
+#
+# you get this:
+#
+# > The program 'ccsm' is currently not installed. You can install it by typing:
+# > sudo apt-get install compizconfig-settings-manager
+# > Do you want to install it? (N/y)
+#
+# Sources: http://askubuntu.com/a/309179 and http://askubuntu.com/a/621922
+export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
+
+EDITOR=nvim
+VISUAL=nvim

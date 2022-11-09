@@ -4,34 +4,6 @@ scriptencoding utf-8
 set encoding=utf-8
 filetype off
 
-" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'lepture/vim-jinja'
-Plugin 'othree/html5.vim'
-Plugin 'groenewege/vim-less'
-Plugin 'jshint.vim'
-Plugin 'surround.vim'
-Plugin 'editorconfig-vim'
-
-Plugin 'mbbill/undotree'
-
-" Python specific stuff
-Plugin 'fisadev/vim-isort'
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
-
-call vundle#end()
-filetype plugin indent on
-" End Vundle
-
-let g:syntastic_python_pylint_exe = 'python -m pylint'
-let g:syntastic_python_checkers = ['pylint']
-
-" Undotree toggle with U
-nnoremap U :UndotreeToggle<cr>
-
 " Paste toggle, because indentation messes up pasted code like this:
 " function pasted() {
 "         var i = 0;
@@ -42,8 +14,6 @@ nnoremap U :UndotreeToggle<cr>
 " but this works for now. (could for instance use Shift+Insert to jump to
 " paste mode, paste the text and turn paste mode off)
 set pastetoggle=<F12>
-
-vmap <F6> :w !xclip<CR><CR>
 
 " Show statusline
 set laststatus=2
@@ -58,23 +28,6 @@ set noshowmode
 set title
 
 set mouse=
-
-command! Reload so $MYVIMRC
-
-" Auto reloads vim | source http://stackoverflow.com/a/2403926/2324209
-augroup myvimrc
-    au!
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
-augroup END
-
-set background=dark
-colorscheme ron
-set t_Co=256
-
-" To enforce 80 line limits, highlight 81st (and optionally 121st) characters
-" on a line
-set colorcolumn=81
-"set colorcolumn=121
 
 syntax on
 filetype plugin indent on

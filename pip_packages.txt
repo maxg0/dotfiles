@@ -1,6 +1,0 @@
-ansible
-https://github.com/joh/when-changed/archive/master.zip
-powerline-status
-virtualenv
-virtualenvwrapper
-youtube-dl

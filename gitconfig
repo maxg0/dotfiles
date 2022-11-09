@@ -1,7 +1,7 @@
 [user]
-	email = maxgrasbeck@gmail.com
-	name = Max
+    email = max@grasbeck.com
+    name = Max
 [core]
-	editor = vim
+    editor = nvim
 [push]
-	default = simple
+    default = simple

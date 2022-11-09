@@ -1,54 +1,4 @@
-# Own customizations begin here
-
-# Write to history automatically.
-export PROMPT_COMMAND='history -a'
-
-# Disable scroll lock
-stty -ixon
-
-export EDITOR=vim
-export VISUAL=vim
-
-# Local or project specific bashrc stuff so we don't "pollute" this file
-source ~/.local_bashrc
-
-# Django bash autocompletion
-. ~/.django_bash_completion
-
-# virtualenvwrapper tab completion fix
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/dev
-source /usr/local/bin/virtualenvwrapper.sh
-
-# this turns the output of the command-not-found package into a prompt instead
-# of telling the user to type out the command. So instead of this:
-#
-# > The program 'ccsm' is currently not installed. You can install it by typing:
-# > sudo apt-get install compizconfig-settings-manager
-#
-# you get this:
-#
-# > The program 'ccsm' is currently not installed. You can install it by typing:
-# > sudo apt-get install compizconfig-settings-manager
-# > Do you want to install it? (N/y)
-#
-# Sources: http://askubuntu.com/a/309179 and http://askubuntu.com/a/621922
-export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
-
-export TERM=xterm-256color
-
-if [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh ]; then
-    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
-fi
-
-# virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/dev
-source /usr/local/bin/virtualenvwrapper.sh
-
-export VIRTUALENV_PYTHON=$(which python3)
-
-# everything from here on is the ubuntu (14.04?) default bashrc
+source ~/.custom_bashrc
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -68,8 +18,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
+HISTSIZE=1000
+HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -77,7 +27,7 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-shopt -s globstar
+#shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -89,7 +39,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -109,9 +59,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\n\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -135,6 +85,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'

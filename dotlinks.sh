@@ -27,11 +27,9 @@ function dotlink(){
 }
 
 dotlink $DOTFILES/bashrc ~/.bashrc
+dotlink $DOTFILES/custom_bashrc ~/.custom_bashrc
 dotlink $DOTFILES/bash_aliases ~/.bash_aliases
 dotlink $DOTFILES/vimrc ~/.vimrc
-dotlink $DOTFILES/vim ~/.vim
 dotlink $DOTFILES/gitconfig ~/.gitconfig
 dotlink $DOTFILES/tmux.conf ~/.tmux.conf
-dotlink $DOTFILES/django_bash_completion ~/.django_bash_completion
-dotlink $DOTFILES/pylintrc ~/.pylintrc
 dotlink $DOTFILES/agignore ~/.agignore
