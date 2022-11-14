@@ -7,3 +7,4 @@ unrar
 unzip
 vim
 neovim
+bash-completion
